@@ -356,8 +356,8 @@ if [[ "$imagen_opcion" == "Crear nueva imagen" ]]; then
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo "📤 SUBIENDO IMAGEN A ARTIFACT REGISTRY"
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    #docker push "$IMAGE_PATH:$IMAGE_TAG"
-    docker push us-central1-docker.pkg.dev/<turbomx>/<dsd>/<dsd>:"$IMAGE_TAG"
+    docker push "$IMAGE_PATH:$IMAGE_TAG"
+    #docker push us-central1-docker.pkg.dev/<turbomx>/<dsd>/<dsd>:"$IMAGE_TAG"
 
     [[ $? -ne 0 ]] && echo -e "${rojo}❌ Error al subir la imagen.${neutro}" && exit 1
 
